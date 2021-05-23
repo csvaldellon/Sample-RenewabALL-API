@@ -11,7 +11,7 @@ def home():
     if request.method == "POST":
         userDate = request.form.get("date")
         predLuzon, predVisayas, predMindanao = get_predict(userDate)
-    return render_template("RenewabALL_2.html", predLuzon=predLuzon, predVisayas=predVisayas, predMindanao=predMindanao)
+    return render_template("index.html", predLuzon=predLuzon, predVisayas=predVisayas, predMindanao=predMindanao)
 
 
 # @app.route("/predict", methods=["GET", "POST"])
